@@ -1,41 +1,36 @@
-# EX 54 D program to print all the letters of the English alphabet
+## print all the letters of the English alphabet.
 
-DATE:5/5/25
+### AIM:
+To write a program to print all of the English alphabet'
 
-# AIM:
-To write a C program to print all the letters of the English alphabet.
+## ALGORITHM
+1.Start: Initialize a loop that will iterate through the English alphabet.
 
-# Algorithm:
-1.Start
+2.Set Initial Character: Start with the first letter of the alphabet, 'a'.
 
-2.Initialize a character variable ch with 'A'.
+3.Loop Through Characters: Use a loop to print each character, starting from 'a' and ending at 'z'.
 
-3.Loop from 'A' to 'Z':
+4.Print Each Character: In each iteration, print the current character.
 
-Print the character.
-Print a space after each character.
+5.End: Once all characters have been printed, terminate the program.
 
-4.End the loop once 'Z' is printed.
-
-5.End
-
-# Program:
-```
+## Program
+```c
 #include <stdio.h>
 
-int main() {
-    char ch;
-    
-    for (ch = 'A'; ch <= 'Z'; ch++) {
-        printf("%c ", ch);
+int main() 
+{
+    for(char c = 'A'; c <= 'Z'; c++) 
+    {
+        printf("%c ", c);
     }
+    
     
     return 0;
 }
 ```
-# Output:
-![WhatsApp Image 2025-05-21 at 11 08 07_fafcbe19](https://github.com/user-attachments/assets/8b2a262c-1c31-4054-9de9-e50c46be0a2b)
+## Output
 
-
-# Result:
-Thus the program was executed and the output was verified successfully.
+![Screenshot 2025-05-13 215600](https://github.com/user-attachments/assets/68743ba3-5223-48e1-9943-3a3374c5b836)
+## Result
+Thus, the program is executed and verified successfully.

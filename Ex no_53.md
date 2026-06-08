@@ -1,27 +1,62 @@
-# EX 53 C program to remove duplicates in an array.
-## DATE:
-## AIM:
-To write a C program to remove duplicates in an array.
+# Write a function int max_of_four(int a, int b, int c, int d) which reads four arguments and returns the greatest of them.
 
-## Algorithm
-1. 
-2. 
-3. 
-4.  
-5.   
+# Note
+There is not built in max function in C. Code that will be reused is often put in a separate function, e.g. int max(x, y) that returns the greater of the two values.
 
-## Program:
+# Input Format
+Input will contain four integers - a,b,c,d , one on each line.
+
+# Output Format
+Print the greatest of the four integers. Note: I/O will be automatically handled.
+
+# AIM
+To write a function int max_of_four(int a, int b, int c, int d) which reads four arguments and returns the greatest of them.
+
+# Algorithm
+1.Start
+
+2.Accept four integer inputs: a, b, c, and d.
+
+3.Initialize max with a.
+
+4.Compare max with b:
+If b is greater than max, update max = b.
+
+5.Compare max with c:
+If c is greater than max, update max = c.
+
+6.Compare max with d:
+If d is greater than max, update max = d.
+
+7.Return max as the largest number.
+
+8.End
+
+#PROGRAM
 ```
-/*
-C program to remove duplicates in an array
-Developed by: 
-RegisterNumber:  
-*/
+#include<stdio.h>
+int compare(int a[4])
+{
+    int max=a[0];
+    for(int i=0;i<4;i++)
+    {
+        if(a[i]>max)
+        max=a[i];
+    }
+    return max;
+}
+int main()
+{
+    int a[4];
+    for(int i=0;i<4;i++)
+    scanf("%d",&a[i]);
+    int d= compare(a);
+    printf("%d",d);
+}
 ```
 
-## Output:
+# OUTPUT
+![WhatsApp Image 2025-05-21 at 10 58 24_b2e0187d](https://github.com/user-attachments/assets/4e1cb235-6012-428f-8c5a-895462eb4cba)
 
-
-
-## Result:
-Thus the program was executed and the output was verified successfully.
+# RESULT
+Thus,the program is executed and verified successfully

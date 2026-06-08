@@ -1,56 +1,49 @@
 # EX 51 C program to reverse a string.
-## DATE:
 ## AIM:
 To write a C program to reverse a string.
 
 ## Algorithm
+1.Initialize two pointers:
 
-1,Start
+One pointer start at the beginning of the string (index 0).
 
-2.Accept a string from the user.
+Another pointer end at the last character of the string (index length - 1).
 
-3.Determine the length of the string.
+2.Loop through the string:
 
-4.Initialize two pointers:- One at the beginning (i = 0).
+3.While start is less than end, swap the characters at the start and end positions.
 
-5.One at the end (j = length - 1).
+Increment start and decrement end to move towards the middle of the string.
 
-6.Swap the characters at positions i and j.
+Terminate when start is no longer less than end.
 
-7.Increment i and decrement j.
-
-8.Repeat steps 5 and 6 until i is greater than or equal to j.
+4.Output the reversed string.
 
 ## Program:
-```
-#include <stdio.h>
-#include <string.h>
-
-int main() {
-    char str[100], reversed[100];
-    int length, i;
-
-    printf("Enter a string: ");
-    scanf("%s", str);  // Reads a single word
-
-    length = strlen(str);
-
-    // Reverse manually
-    for (i = 0; i < length; i++) {
-        reversed[i] = str[length - i - 1];
+```c
+#include<stdio.h>
+#include<string.h>
+void reverseString(char str[]){
+    int n=strlen(str);
+    for(int i=0;i<n/2;i++){
+        char temp=str[i];
+        str[i]=str[n-i-1];
+        str[n-i-1]=temp;
     }
-    reversed[length] = '\0'; // Null-terminate the reversed string
-
-    printf("Reversed string: %s\n", reversed);
-    
+}
+int main(){
+    char str[100];
+    fgets(str,sizeof(str),stdin);
+    printf("Input String: %s",str);
+    str[strcspn(str, "\n")] = '\0';
+    reverseString(str);
+    printf("Reverse String: %s\n",str);
     return 0;
 }
 ```
 
 ## Output:
-![WhatsApp Image 2025-05-21 at 10 53 44_5edaa8d6](https://github.com/user-attachments/assets/56788732-4c99-4286-b6a5-e0ff75f453e6)
-
-
+![Screenshot 2025-05-13 212305](https://github.com/user-attachments/assets/bb72f522-8290-44f3-b3c5-ab3c0f49fd54)
 
 ## Result:
 Thus the program was executed and the output was verified successfully.
